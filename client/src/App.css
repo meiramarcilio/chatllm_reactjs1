@@ -1,0 +1,101 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#root {
+  height: 100vh; /* Full viewport height */
+  background-color:#7CACF8;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+}
+
+.App-header, .Chat-footer { 
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.App-header {
+  height:7vh;
+}
+
+.active {
+  color: #282c34;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.Chat-footer {
+  height:10vh;
+}
+
+.Chat-main {
+  flex: 1;
+  background-color: #282c34;
+  padding: 1rem;
+  overflow-y: auto; /* Scroll if content overflows */
+}
+
+.Chat-footer textarea,.Chat-footer input[type="text"] {
+  width: 90%;
+  background-color:#eee;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+.Chat-footer button {
+  padding:5px;
+  margin-left: 10px;
+  margin-top: 15px;
+  border-radius: 8px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.nav {
+    background-color:#7CACF8;
+    list-style-type: none;
+    text-align:center;
+    margin: 0;
+    padding: 0;
+}
+.nav li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px;
+}
+
+div.messages > div {
+  border-radius: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
+  padding-left: 20px;
+  width:80%;
+  display: block;
+  font-size: 18px;
+}
+
+div.messages > div.userMsg {
+  background-color: #eee;
+  float:left;
+  display: block;
+}
+
+div.messages > div.AIMsg {
+  background-color: #bbb;
+  float:right;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .App-header, .App-footer {
+    padding: 0.5rem;
+  }
+}
